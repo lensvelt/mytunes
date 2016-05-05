@@ -15,7 +15,6 @@ var PlayerView = Backbone.View.extend({
 
   dequeued: function() {
     // if (e.target === this.$el)
-    debugger;
     this.model.dequeue();
   },
 
