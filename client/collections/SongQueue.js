@@ -25,6 +25,10 @@ var SongQueue = Backbone.Collection.extend({
       }
     });
 
+    this.on('enqueue', function() {
+      this.add();
+    });
+
   },
 
   playFirst: function() {
