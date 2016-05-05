@@ -6,6 +6,11 @@ var PlayerView = Backbone.View.extend({
   el: '<audio controls autoplay />',
 
   initialize: function() {
+    console.log('PVInit: ', this);
+    this.$el.on('ended', function() {
+      // TO DO - BIND event ended to our SongQueue listener... or something like that.
+      // Backbone custom events object/callback
+    });
   },
 
   setSong: function(song) {
@@ -18,3 +23,8 @@ var PlayerView = Backbone.View.extend({
   }
 
 });
+
+
+// $("#player").bind("ended", function(){
+//     alert('Ended!');        
+// });
